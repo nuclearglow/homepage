@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json.schemastore.org/stylelintrc",
+    "extends": ["stylelint-config-recommended"],
+    "plugins": ["stylelint-declaration-use-variable", "stylelint-scss"],
+    "rules": {
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ["include", "mixin", "if", "else", "extend", "each"]
+            }
+        ],
+        "scss/at-import-no-partial-leading-underscore": true,
+        "scss/selector-no-redundant-nesting-selector": true,
+        "sh-waqar/declaration-use-variable": [
+            [
+                "/color/",
+                {
+                    "ignoreValues": ["transparent", "inherit", "/transparent/", "/rgba/"]
+                }
+            ]
+        ],
+        "declaration-bang-space-before": "always",
+        "declaration-bang-space-after": "never",
+        "function-calc-no-invalid": null,
+        "declaration-property-value-blacklist": {
+            "/^border-\\w+$/": ["none"]
+        },
+        "color-named": "never",
+        "declaration-block-no-duplicate-properties": [
+            true,
+            {
+                "ignoreProperties": ["/background/", "/border/", "/transform/"]
+            }
+        ],
+        "no-descending-specificity": null,
+        "block-no-empty": null,
+        "no-empty-source": null,
+        "color-no-invalid-hex": true,
+        "indentation": null,
+        "selector-max-id": 0,
+        "no-duplicate-selectors": true,
+        "max-nesting-depth": 6,
+        "property-no-unknown": true,
+        "unit-whitelist": [
+            "fr",
+            "ch",
+            "em",
+            "ex",
+            "rem",
+            "cm",
+            "in",
+            "mm",
+            "pc",
+            "pt",
+            "px",
+            "q",
+            "vh",
+            "vw",
+            "vmin",
+            "vmax",
+            "deg",
+            "grad",
+            "rad",
+            "turn",
+            "ms",
+            "s",
+            "Hz",
+            "kHz",
+            "dpi",
+            "dpcm",
+            "dppx",
+            "%"
+        ],
+        "selector-no-qualifying-type": [
+            true,
+            {
+                "ignore": ["attribute", "class", "id"]
+            }
+        ],
+        "shorthand-property-no-redundant-values": null,
+        "selector-list-comma-newline-after": null,
+        "number-no-trailing-zeros": null,
+        "declaration-no-important": true
+    }
+}

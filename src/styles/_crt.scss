@@ -1,0 +1,128 @@
+.crt {
+    position: relative;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    font-size: $font-size;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+
+.screen {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    background: #000;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 0 1px 3px rgba(10, 10, 10, 0.7);
+
+    &::before {
+        @include fill();
+
+        content: '';
+        z-index: 70;
+        border-radius: 0;
+    }
+
+    &::after {
+        @include fill();
+
+        content: '';
+        z-index: 60;
+        opacity: 0.1;
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    }
+}
+
+.wrapper {
+    @include fill();
+
+    z-index: 30;
+    transform-origin: 50% 50%;
+    transform: skewX(0.5deg);
+    animation: pulse 5s linear infinite;
+
+    &::before {
+        @include fill();
+
+        content: '';
+        z-index: 31;
+        background: radial-gradient(ellipse at center, rgba($gradient-bottom, 0) 0%, rgba($gradient-bottom, 0.5) 100%);
+        pointer-events: none;
+    }
+
+    &::after {
+        @include fill();
+
+        content: '';
+        z-index: 32;
+        opacity: 0.5;
+        background: radial-gradient(ellipse at center, rgba($gradient-inner, 1) 0%, rgba($gradient-inner, 0) 100%);
+        pointer-events: none;
+        animation: glow 2s linear infinite;
+    }
+}
+
+.interlace {
+    @include fill();
+
+    z-index: 21;
+    opacity: 0.25;
+    background: $interlace-background;
+    background-size: 100% $interlace-size;
+    background-repeat: repeat-y;
+}
+
+.envelope {
+    @include fill($envelope-margin, $envelope-margin, $envelope-margin, $envelope-margin);
+
+    z-index: 40;
+    border-radius: $base-unit / 2;
+    background: $envelope-background;
+    animation: skew 5s linear infinite;
+}
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $base-unit;
+    opacity: 0.1;
+    background: $scanline-background;
+    animation: scanline 2s linear infinite;
+}
+
+.terminal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    .term {
+        display: block;
+        background: transparent;
+        resize: none;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border: 0 none;
+        outline: 0 none;
+        box-sizing: border-box;
+        margin: 0;
+        overflow: hidden;
+        color: $output-color;
+        text-shadow: 0 0 2px $output-text-shadow;
+        font-family: $output-font-family;
+        font-size: inherit;
+        animation: blur 5s linear infinite;
+        line-height: $output-line-height;
+        // white-space: pre-wrap;
+    }
+}
