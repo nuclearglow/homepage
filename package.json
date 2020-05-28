@@ -4,30 +4,30 @@
     "description": "homepage",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack-dev-server",
         "build": "webpack",
         "watch": "webpack --watch",
-        "serve": "webpack-dev-server",
         "eslint": "eslint src/**/*.js",
         "stylelint": "eslint src/**/*.scss"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "git@github.com:nuclearglow/homepage.git"
     },
     "keywords": [
-        ""
+        "https://github.com/nuclearglow/homepage"
     ],
     "author": "Sven Vowe <svenvowe@gmail.com>",
     "license": "MIT",
     "bugs": {
-        "url": ""
+        "url": "https://github.com/nuclearglow/homepage/issues"
     },
     "homepage": "https://svenvowe.de",
     "devDependencies": {
-        "@babel/core": "^7.0.0-rc.1",
+        "@babel/core": "^7.10.1",
+        "@babel/plugin-transform-arrow-functions": "^7.10.1",
         "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
-        "@babel/preset-env": "^7.0.0-rc.1",
+        "@babel/preset-env": "^7.10.1",
         "@babel/runtime": "^7.0.0-rc.1",
         "autoprefixer": "^9.1.0",
         "babel-eslint": "^10.1.0",
@@ -53,5 +53,8 @@
         "webpack": "^4.16.5",
         "webpack-cli": "^3.1.0",
         "webpack-dev-server": "^3.1.5"
+    },
+    "dependencies": {
+        "rxjs": "^6.5.5"
     }
 }

@@ -1,3 +1,5 @@
+import { timer } from 'rxjs'
+import { takeWhile } from 'rxjs/operators'
 import './src/styles.scss'
 
 // Banner text
@@ -23,7 +25,14 @@ const contactInfo = {
 }
 
 const load = () => {
-    console.log('Initialized...')
+    timer(333, 50)
+        .pipe(takeWhile((i) => i < banner.length))
+        .subscribe((i) => {
+            if (i === 0) {
+                // setup
+            }
+            // set banner.charAt(i)
+        })
 }
 
 document.addEventListener('DOMContentLoaded', load)

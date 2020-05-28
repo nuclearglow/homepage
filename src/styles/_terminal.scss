@@ -1,0 +1,38 @@
+.terminal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    .term {
+        display: block;
+        background: transparent;
+        resize: none;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border: 0 none;
+        outline: 0 none;
+        box-sizing: border-box;
+        margin: 0;
+        overflow: hidden;
+        color: $output-color;
+        text-shadow: 0 0 2px $output-text-shadow;
+        font-family: $output-font-family;
+        font-size: inherit;
+        animation: blur 5s linear infinite;
+        line-height: $output-line-height;
+
+        .terminal-content {
+        }
+
+        .cursor {
+            width: 1px;
+            height: 100%;
+            margin-left: 2px;
+            line-height: $output-line-height;
+            border-left: 2px solid $output-color;
+            animation: beam 1.5s ease-out infinite;
+        }
+    }
+}
