@@ -33,6 +33,7 @@
 
             &:hover {
                 color: $color;
+                text-shadow: 0 0 10px $color, 0px 0px 4px rgba(255, 255, 255, 0);
             }
         }
 
