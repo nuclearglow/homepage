@@ -97,4 +97,9 @@
     opacity: 0.1;
     background: $scanline-background;
     animation: scanline $scanline-speed ease-in-out infinite;
+    pointer-events: none;
+}
+
+.info {
+    z-index: 100;
 }

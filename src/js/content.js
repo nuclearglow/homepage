@@ -11,34 +11,33 @@ export const banner = `
 > Nice to meet you!
 
 > I'm Sven Vowe
-    * full stack web developer
-    * IT freelancer
+\t* full stack web developer
+\t* IT freelancer
+
+> You can reach me on:
 
 `
 
 // Contact texts
 export const contacts = [
     {
-        text: 'You can find me on:'
-    },
-    {
-        text: 'email',
+        text: '\temail\n',
         link: 'svenvowe@gmail.com'
     },
     {
-        text: 'github',
+        text: '\tgithub\n',
         link: 'https://github.com/nuclearglow'
     },
     {
-        text: 'linkedin',
+        text: '\tlinkedin\n',
         link: 'https://www.linkedin.com/in/svenvowe/'
     },
     {
-        text: 'gulp',
+        text: '\tgulp\n',
         link: 'https://www.gulp.de/gulp2/home/profil/6hpm75x1o6?5'
     },
     {
-        text: 'xing',
+        text: '\txing\n',
         link: 'https://xing.to/svenvowe'
     }
 ]
