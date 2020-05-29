@@ -13,7 +13,7 @@ export const TerminalList = ({ content, condition, completed }) => {
         return (
             <span class="list">
                 {content.map((item, index) => (
-                    <a href={item.link}>
+                    <a target="_blank" rel="noopener noreferrer" href={item.link}>
                         <Terminal
                             condition={completedItem === index}
                             content={item.text}

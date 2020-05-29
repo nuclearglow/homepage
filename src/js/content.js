@@ -11,10 +11,10 @@ export const banner = `
 > Nice to meet you!
 
 > I'm Sven Vowe
-\t* full stack web developer
+\t* full stack web dev
 \t* IT freelancer
 
-> You can reach me on:
+> Reach me here:
 
 `
 
@@ -22,7 +22,7 @@ export const banner = `
 export const contacts = [
     {
         text: '\temail\n',
-        link: 'svenvowe@gmail.com'
+        link: 'mailto:svenvowe@gmail.com'
     },
     {
         text: '\tgithub\n',
@@ -41,3 +41,7 @@ export const contacts = [
         link: 'https://xing.to/svenvowe'
     }
 ]
+
+export const footer = `
+> Have a nice day !\n
+`

@@ -1,9 +1,9 @@
 @import 'styles/fonts';
 @import 'styles/variables';
+@import 'styles/responsive';
 
 @import 'styles/animations';
 @import 'styles/crt';
-@import 'styles/responsive';
 @import 'styles/terminal';
 
 body,
@@ -14,7 +14,7 @@ html {
 
 body {
     background-color: $background-color;
-    font-size: 14px;
+    font-size: $font-size;
     font-family: 'Roboto Mono', monospace;
     color: $color;
     display: flex;
