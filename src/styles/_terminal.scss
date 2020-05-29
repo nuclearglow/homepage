@@ -4,7 +4,7 @@
     height: 100%;
     z-index: 50;
 
-    .term {
+    .content {
         display: block;
         background: transparent;
         resize: none;
@@ -23,13 +23,15 @@
         animation: blur 5s linear infinite;
         line-height: $output-line-height;
 
-        .terminal-content {
+        pre {
+            display: inline;
         }
 
         .cursor {
+            display: inline;
             width: 1px;
-            height: 100%;
-            margin-left: 2px;
+            height: $output-line-height;
+            margin-left: 3px;
             line-height: $output-line-height;
             border-left: 2px solid $output-color;
             animation: beam 1.5s ease-out infinite;

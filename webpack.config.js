@@ -20,13 +20,21 @@ if (mode === 'production') {
 module.exports = {
     mode,
     devtool: 'source-map',
-    entry: [path.resolve(__dirname, 'index.js')],
+    entry: [path.resolve(__dirname, 'src/index.js')],
     output: {
         sourceMapFilename: '[file].map',
         filename: '[name].js'
     },
     optimization: {
         minimize
+    },
+    resolve: {
+        alias: {
+            react: 'preact/compat',
+            'react-dom/test-utils': 'preact/test-utils',
+            'react-dom': 'preact/compat'
+            // Must be below test-utils
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({

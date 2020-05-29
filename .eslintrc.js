@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['airbnb-base', 'prettier'],
+    extends: ['preact', 'prettier'],
     plugins: ['prettier'],
     env: {
         browser: true,
