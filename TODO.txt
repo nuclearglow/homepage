@@ -1,8 +1,12 @@
-# replace term with animated text, stylings
+# optimization
+lighthouse
+responsive styles
+noscript?
 
 # dev
 git commit hook, husky
 
 # deploy
-server setup
-script, creds, upload
+server setup: Apache, SSL, deployer user, add to www group, set up directory
+test upload
+test page

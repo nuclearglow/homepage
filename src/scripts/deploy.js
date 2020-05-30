@@ -22,6 +22,7 @@ const ssh = new SSH({
     baseDir: credentials.remotePath
 })
 
+// clean up directory
 // ssh.exec('rm -Rf *', {
 //     out: (stdout) => {
 //         console.log(stdout)
@@ -52,7 +53,7 @@ client.scp(
     },
     (err) => {
         if (err) {
-            console.error('Error during SCP Deployment: ', err)
+            console.error('Error during Deployment: ', err)
         }
         console.log('Deployment complete')
     }
