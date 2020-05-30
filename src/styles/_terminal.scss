@@ -21,6 +21,7 @@
         font-size: inherit;
         animation: blur 5s linear infinite;
         line-height: $output-line-height;
+        user-select: none;
 
         pre {
             display: inline;

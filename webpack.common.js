@@ -2,6 +2,7 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     devtool: 'source-map',
@@ -23,6 +24,31 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/index.html')
+        }),
+        new FaviconsWebpackPlugin({
+            logo: './src/assets/rtype.png',
+            cache: true,
+            inject: true,
+            favicons: {
+                appName: 'svenvowe.de',
+                appDescription: 'Hello',
+                developerName: 'Sven Vowe',
+                background: '#1e1e1e',
+                theme_color: '#1e1e1e',
+                appleStatusBarStyle: 'black-translucent',
+                orientation: 'portrait',
+                pixel_art: true,
+                icons: {
+                    favicons: true,
+                    android: true,
+                    appleIcon: true,
+                    yandex: true,
+                    coast: true,
+                    firefox: false,
+                    appleStartup: false,
+                    windows: false
+                }
+            }
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
