@@ -1,8 +1,6 @@
 # replace term with animated text, stylings
 
 # dev
-repait package.json
-better scripts
 git commit hook, husky
 
 # deploy
