@@ -8,18 +8,15 @@ npm i
 
 ## Development
 
-TODO: make better
-
--   `npm run serve` - Development server
--   `npm run build` - Build
--   `npm run watch` - Watch for changes (not needed with dev server)
+-   `npm start` - Development server
+-   `npm run build` - Build production to `dist/`
 -   `npm run eslint` - Run eslint pass
 -   `npm run stylelint` - Run stylelint pass
 
 ## Deployment
 
-TODO
+-   `npm run deploy` - Build prod release and deploys to server
 
 ## Acknowledgements
 
-Inspired by https://crt.no/
+Terminal inspired by https://crt.no/

@@ -1,10 +1,5 @@
-# optimization
-lighthouse optimization
-
 # dev
 git commit hook, husky
-webpack cache hashing
 
-# deploy
-apache gzip
-apache cache
+# deployment
+better remote cleanup

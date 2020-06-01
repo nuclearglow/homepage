@@ -23,7 +23,7 @@ const ssh = new SSH({
 })
 
 // clean up directory
-ssh.exec('rm -Rf *', {
+ssh.exec('rm -Rf *.*', {
     out: (stdout) => {
         console.log(stdout)
     },
@@ -31,6 +31,13 @@ ssh.exec('rm -Rf *', {
         console.log(stderr)
     }
 }).start()
+
+ssh.on('error', (err) => {
+    console.log('Oops, something went wrong.')
+    console.log(err)
+    ssh.end()
+})
+
 ssh.end()
 
 getFolderSize('dist', (err, size) => {
