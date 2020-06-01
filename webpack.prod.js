@@ -7,7 +7,17 @@ module.exports = merge(common, {
     mode: 'production',
     optimization: {
         minimize: true,
-        sideEffects: true
+        sideEffects: true,
+        moduleIds: 'hashed',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
     },
     plugins: [
         new OptimizeCSSAssetsPlugin({
