@@ -1,12 +1,10 @@
 # optimization
-lighthouse
-responsive styles
-noscript?
+lighthouse optimization
 
 # dev
 git commit hook, husky
+webpack cache hashing
 
 # deploy
-server setup: Apache, SSL, deployer user, add to www group, set up directory
-test upload
-test page
+apache gzip
+apache cache
