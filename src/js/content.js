@@ -1,5 +1,6 @@
 // Banner text
-export const banner = `\t _   _      _ _
+export const banner = `
+\t _   _      _ _
 \t| | | |    | | |
 \t| |_| | ___| | | ___
 \t|  _  |/ _ \\ | |/ _ \\

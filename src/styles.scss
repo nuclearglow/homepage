@@ -15,8 +15,8 @@ html {
 
 body {
     background-color: $background-color;
-    font-size: $font-size;
     font-family: 'Hack', monospace;
+    font-size: calc(2.75vmin - 4em);
     color: $color;
     display: flex;
     margin: 0;

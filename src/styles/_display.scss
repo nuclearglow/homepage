@@ -3,10 +3,17 @@
     min-height: -webkit-fill-available;
     width: 100vw;
     height: 100vh;
-    font-size: $font-size;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000;
+
+    @media (orientation: landscape) {
+        font-size: calc(2.75vmin - 4em);
+    }
+
+    @media (orientation: portrait) {
+        font-size: calc(3.75vmin - 4em);
+    }
 }
 
 .screen {
