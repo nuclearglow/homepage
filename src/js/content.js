@@ -45,3 +45,5 @@ export const contacts = [
 export const footer = `
 > Have a nice day !\n
 `
+
+export const prompt = `~ % `

@@ -1,12 +1,12 @@
 .display {
     position: relative;
     min-height: -webkit-fill-available;
-    width: 100vw;
-    height: 100vh;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000;
 
+    width: 100vw;
+    height: 100vh;
     @media (orientation: landscape) {
         font-size: calc(2.75vmin - 4em);
     }
@@ -81,7 +81,7 @@
 }
 
 .envelope {
-    @include fill($envelope-margin, $envelope-margin, $envelope-margin, $envelope-margin);
+    @include fill($envelope-margin, $envelope-margin, $envelope-margin, 0);
     background: $envelope-background;
     animation: skew 5s linear infinite;
 }

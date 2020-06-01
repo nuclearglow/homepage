@@ -14,8 +14,9 @@ export const Terminal = ({ content, condition, completed }) => {
     )
 
     useEffect(() => {
+        console.log('running effect')
+
         if (condition) {
-            console.log(content)
             timer$.subscribe((i) => {
                 setMessage(content.substr(0, i + 1))
             })
