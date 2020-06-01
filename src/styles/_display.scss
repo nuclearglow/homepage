@@ -1,5 +1,6 @@
-.crt {
+.display {
     position: relative;
+    min-height: -webkit-fill-available;
     width: 100vw;
     height: 100vh;
     font-size: $font-size;
@@ -74,8 +75,6 @@
 
 .envelope {
     @include fill($envelope-margin, $envelope-margin, $envelope-margin, $envelope-margin);
-
-    border-radius: $base-unit / 2;
     background: $envelope-background;
     animation: skew 5s linear infinite;
 }
@@ -85,7 +84,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: $base-unit;
+    height: $scanline-height;
     opacity: 0.1;
     background: $scanline-background;
     animation: scanline $scanline-speed ease-in-out infinite;

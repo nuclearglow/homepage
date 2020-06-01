@@ -1,13 +1,17 @@
+// base colors
 $background-color: #1e1e1e;
 $color: #fff;
-$base-unit: 1em;
-$font-size: 18px;
-$chassis-background: #7b8e78;
-$chassis-margin: $base-unit;
+
+// envelope
+$envelope-margin: 2em;
+$envelope-background: rgba(#1e1e1e, 0.25);
+
+// interlace
 $interlace-background: linear-gradient(#888 50%, #1e1e1e 50%);
 $interlace-size: 4px;
-$envelope-background: rgba(#1e1e1e, 0.25);
-$envelope-margin: 2em;
+
+// scanline
+$scanline-height: 1em;
 $scanline-speed: 3s;
 $scanline-background: linear-gradient(
     to bottom,
@@ -16,6 +20,10 @@ $scanline-background: linear-gradient(
     rgba(100, 255, 100, 1) 50%,
     transparent 100%
 );
+
+// terminal
+$font-size: calc(2.75vmin - 4em);
+
 $output-font-family: 'monofont';
 $output-color: #18ff62;
 $output-text-shadow: rgba(10, 255, 10, 0.8);
@@ -23,6 +31,7 @@ $output-line-height: 1.25;
 $gradient-bottom: rgb(0, 30, 30);
 $gradient-inner: rgb(0, 0, 0);
 
+// mixins
 @mixin fill($top: 0, $left: 0, $right: 0, $bottom: 0) {
     position: absolute;
     left: $left;

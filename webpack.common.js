@@ -58,11 +58,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(eot|woff|ttf|svg)$/,
+                test: /\.(eot|woff|woff2|ttf|svg)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
                     }
                 ]
             },

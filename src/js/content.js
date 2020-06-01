@@ -1,11 +1,10 @@
 // Banner text
-export const banner = `
-     _   _      _ _
-    | | | |    | | |
-    | |_| | ___| | | ___
-    |  _  |/ _ \\ | |/ _ \\
-    | | | |  __/ | | (_) |
-    \\_| |_/\\___|_|_|\\___/
+export const banner = `\t _   _      _ _
+\t| | | |    | | |
+\t| |_| | ___| | | ___
+\t|  _  |/ _ \\ | |/ _ \\
+\t| | | |  __/ | | (_) |
+\t\\_| |_/\\___|_|_|\\___/
 
 
 > Nice to meet you!
@@ -21,23 +20,23 @@ export const banner = `
 // Contact texts
 export const contacts = [
     {
-        text: '\temail\n',
+        text: '\t-> email\n',
         link: 'mailto:svenvowe@gmail.com'
     },
     {
-        text: '\tgithub\n',
+        text: '\t-> github\n',
         link: 'https://github.com/nuclearglow'
     },
     {
-        text: '\tlinkedin\n',
+        text: '\t-> linkedin\n',
         link: 'https://www.linkedin.com/in/svenvowe/'
     },
     {
-        text: '\tgulp\n',
+        text: '\t-> gulp\n',
         link: 'https://www.gulp.de/gulp2/home/profil/6hpm75x1o6?5'
     },
     {
-        text: '\txing\n',
+        text: '\t-> xing\n',
         link: 'https://xing.to/svenvowe'
     }
 ]

@@ -1,21 +1,22 @@
 @import 'styles/fonts';
 @import 'styles/variables';
-@import 'styles/responsive';
-
 @import 'styles/animations';
-@import 'styles/crt';
+
+@import 'styles/display';
 @import 'styles/terminal';
 
 body,
 html {
     width: 100%;
     height: 100%;
+    margin: 0;
+    overflow: hidden;
 }
 
 body {
     background-color: $background-color;
     font-size: $font-size;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Hack', monospace;
     color: $color;
     display: flex;
     margin: 0;
@@ -24,9 +25,6 @@ body {
     justify-content: center;
 }
 
-.info {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: $base-unit / 2;
+pre {
+    font-family: 'Hack', monospace;
 }
