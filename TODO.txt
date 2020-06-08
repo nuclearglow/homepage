@@ -1,5 +1,2 @@
 # dev
 git commit hook, husky
-
-# deployment
-better remote cleanup
