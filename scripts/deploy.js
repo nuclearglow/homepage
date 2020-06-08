@@ -7,7 +7,7 @@ const version = require('../package.json').version
 const credentials = require('../.credentials.json')
 
 /**
- * Deployment: connect to SSH, copy dist folder to remote
+ * Deployment: connect to SSH, clean up files, copy dist folder to remote
  */
 console.log(`Deploying ${name}@${version}`)
 
@@ -26,7 +26,7 @@ const deploy = async () => {
 
     console.log(`Cleaning up...`)
 
-    const result = await ssh.execCommand('rm -Rf *', { cwd: credentials.remotePath })
+    let result = await ssh.execCommand('rm -Rf *', { cwd: credentials.remotePath })
     if (result.code > 0) {
         console.err(result.stderr)
     }
@@ -38,6 +38,11 @@ const deploy = async () => {
 
     const failed = []
     const successful = []
+
+    result = await ssh.execCommand(`echo ${version} > VERSION`, { cwd: credentials.remotePath })
+    if (result.code > 0) {
+        console.err(result.stderr)
+    }
 
     const status = await ssh.putDirectory('dist/', credentials.remotePath, {
         recursive: true,
