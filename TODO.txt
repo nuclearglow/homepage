@@ -1,2 +1,8 @@
 # dev
 git commit hook, husky
+
+# deployment
+* get a list of files to be deployed
+* upload
+* iterate through all files online
+* delete those that were not in the original list
