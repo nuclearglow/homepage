@@ -25,5 +25,6 @@ module.exports = merge(common, {
                 discardComments: true
             }
         })
-    ]
+    ],
+    stats: 'minimal'
 })
