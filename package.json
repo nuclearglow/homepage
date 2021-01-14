@@ -56,15 +56,17 @@
         "file-loader": "^1.1.11",
         "html-webpack-plugin": "^4.0.0-alpha",
         "http-server": "^0.12.3",
+        "husky": "^4.3.7",
+        "lint-staged": "^10.5.3",
         "mini-css-extract-plugin": "^0.4.1",
-        "node-sass": "^4.9.3",
         "node-ssh": "^10.0.2",
         "npm": "^6.14.5",
         "npm-run-all": "^4.1.5",
         "optimize-css-assets-webpack-plugin": "^5.0.0",
         "postcss-loader": "^3.0.0",
         "prettier": "^2.0.5",
-        "sass-loader": "^7.1.0",
+        "sass": "^1.32.4",
+        "sass-loader": "^7.3.1",
         "simple-ssh": "^1.0.0",
         "stylelint": "^13.3.3",
         "stylelint-config-recommended": "^3.0.0",
@@ -74,5 +76,14 @@
         "webpack-cli": "^3.1.0",
         "webpack-dev-server": "^3.1.5",
         "webpack-merge": "^4.2.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.scss": "stylelint --fix"
     }
 }
