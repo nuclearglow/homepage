@@ -1,6 +1,5 @@
 {
-    "eslint.enable": true,
-    "eslint.validate": ["html", "javascript"],
+    "eslint.validate": ["html", "javascript", "scss"],
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true,
@@ -28,7 +27,9 @@
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
     "window.zoomLevel": 0,
-    "files.exclude": {},
+    "files.exclude": {
+        ".eslintcache": true
+    },
     "search.exclude": {
         "/node_modules": true
     }
