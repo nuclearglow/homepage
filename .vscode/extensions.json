@@ -7,7 +7,6 @@
         "CoenraadS.bracket-pair-colorizer",
         "sleistner.vscode-fileutils",
         "christian-kohler.path-intellisense",
-        "formulahendry.auto-rename-tag",
-        "stylelint.vscode-stylelint"
+        "hex-ci.stylelint-plus"
     ]
 }
