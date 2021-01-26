@@ -6,7 +6,6 @@
         "esbenp.prettier-vscode",
         "CoenraadS.bracket-pair-colorizer",
         "sleistner.vscode-fileutils",
-        "christian-kohler.path-intellisense",
         "hex-ci.stylelint-plus"
     ]
 }

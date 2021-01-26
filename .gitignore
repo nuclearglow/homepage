@@ -1,20 +1,22 @@
-node_modules/
-*.tmp
-*.swp
+# dependencies
+node_modules
 
-# dotenv
-.env
+# clutter
+/*.log
+/coverage
+
+# error messages
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # linting
 .eslintcache
 .stylelintcache
 
-# production
-/dist
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# certificates
+/.certs
 
 # deployment
+/build
 .credentials.json

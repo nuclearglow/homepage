@@ -1,2 +1,0 @@
-# dev
-git commit hook, husky

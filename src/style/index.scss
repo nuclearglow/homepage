@@ -1,9 +1,9 @@
-@import 'styles/fonts';
-@import 'styles/variables';
-@import 'styles/animations';
+@import 'modules/fonts';
+@import 'modules/variables';
+@import 'modules/animations';
 
-@import 'styles/display';
-@import 'styles/terminal';
+@import 'modules/display';
+@import 'modules/terminal';
 
 body,
 html {

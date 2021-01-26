@@ -1,27 +1,42 @@
 module.exports = {
-    extends: ['preact', 'prettier'],
-    plugins: ['prettier'],
     env: {
-        browser: true,
-        es6: true,
-        node: true,
+        browser: true
     },
-    parser: 'babel-eslint',
+    plugins: ["@typescript-eslint"],
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "prettier/react"
+    ],
+    parser: "@typescript-eslint/parser",
     parserOptions: {
-        sourceType: "module",
-        ecmaVersion: 8
-    },
-    globals: {
-        Promise: true,
-        ArrayBuffer: true,
-        File: true,
-        Blob: true,
-        OSjs: true,
-        OSJS_VERSION: true,
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly',
+        ecmaFeatures: {
+            jsx: true
+        },
+        project: "./tsconfig.eslint.json",
     },
     rules: {
-        'prettier/prettier': 'error'
-    }
-}
+        "react/no-unknown-property": ["error", { ignore: ["class"] }],
+        "@typescript-eslint/explicit-function-return-type": "warn",
+    },
+    settings: {
+        react: {
+            pragma: "h",
+            version: "detect"
+        },
+    },
+    overrides: [
+        {
+            files: ["*.js"],
+            rules: {
+                "@typescript-eslint/explicit-function-return-type": "off",
+            }
+        }
+    ]
+};

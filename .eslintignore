@@ -1,2 +1,6 @@
-*.html
-dist/
+*.scss
+build/
+*.d.ts
+scripts/
+jest.config.js
+preact.config.js

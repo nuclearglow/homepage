@@ -1,9 +1,16 @@
-import { h } from 'preact'
+import { FunctionalComponent, h } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 import { timer } from 'rxjs'
-import { takeWhile, finalize } from 'rxjs/operators'
+import { finalize, takeWhile } from 'rxjs/operators'
 
-export const Terminal = ({ content, condition, completed }) => {
+interface Props {
+    content: string
+    condition: boolean
+    completed: Function
+}
+
+const Terminal: FunctionalComponent<Props> = (props: Props) => {
+    const { content, condition, completed } = props
     const [message, setMessage] = useState('')
 
     const timer$ = timer(333, 25).pipe(
@@ -25,3 +32,5 @@ export const Terminal = ({ content, condition, completed }) => {
 
     return <pre>{message}</pre>
 }
+
+export default Terminal

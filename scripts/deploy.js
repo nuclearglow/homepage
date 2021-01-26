@@ -43,7 +43,7 @@ const deploy = async () => {
     const filesToDelete = remoteFiles.filter((f) => !localFiles.includes(f))
 
     // compute upload size
-    const size = await du('dist')
+    const size = await du('build')
     const deploymentSize = (size / 1024 / 1024).toFixed(2)
 
     console.log(`Uploading ${localFiles.length} files (${deploymentSize} MB)`)

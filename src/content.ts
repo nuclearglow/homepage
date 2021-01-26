@@ -19,7 +19,12 @@ export const banner = `
 `
 
 // Contact texts
-export const contacts = [
+export interface Contacts {
+    text: string
+    link: string
+}
+
+export const contacts: Contacts[] = [
     {
         text: '\t-> email\n',
         link: 'mailto:svenvowe@gmail.com'

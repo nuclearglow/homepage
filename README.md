@@ -1,17 +1,24 @@
 # Homepage
 
-## Installation
+Preact CLI App
 
-```shell
-npm i
-```
+## CLI Commands
 
-## Development
+-   `npm install`: Installs dependencies
 
--   `npm start` - Development server
--   `npm run build` - Build production to `dist/`
--   `npm run eslint` - Run eslint pass
--   `npm run stylelint` - Run stylelint pass
+-   `npm run dev`: Run a development, HMR server
+
+-   `npm run serve`: Run a production-like server
+
+-   `npm run build`: Production-ready build
+
+-   `npm run lint`: Pass TypeScript files using ESLint
+
+-   `npm run test`: Run Jest and Enzyme with
+    [`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure) for
+    your tests
+
+For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
 
 ## Deployment
 
@@ -20,3 +27,9 @@ npm i
 ## Acknowledgements
 
 Terminal inspired by https://crt.no/
+
+Created with:
+
+```bash
+npx preact-cli create typescript homepage
+```
