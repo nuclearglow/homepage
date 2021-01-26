@@ -15,7 +15,7 @@
             [
                 "/color/",
                 {
-                    "ignoreValues": ["transparent", "inherit", "/transparent/", "/rgba/"]
+                    "ignoreValues": ["transparent", "inherit", "/transparent/", "/rgba/", "/darken/"]
                 }
             ]
         ],
