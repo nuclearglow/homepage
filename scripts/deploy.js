@@ -1,6 +1,6 @@
 const fs = require('fs')
 const du = require('du')
-const NodeSSH = require('node-ssh')
+const { NodeSSH } = require('node-ssh')
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
 const name = require('../package.json').name
@@ -27,14 +27,14 @@ const deploy = async () => {
 
     // Get local list of files to deploy
     let localFiles = []
-    let result = await exec('find . -print', { cwd: './build' })
+    let result = await exec('find . -type f -print', { cwd: './build' })
     if (result.stdout) {
         localFiles = result.stdout.split('\n').filter((f) => f !== '.')
     }
 
     // Get remote list of files currently deployed
     let remoteFiles = []
-    result = await ssh.execCommand('find . -print', { cwd: credentials.remotePath })
+    result = await ssh.execCommand('find . -type f -print', { cwd: credentials.remotePath })
     if (result.stdout) {
         remoteFiles = result.stdout.split('\n').filter((f) => f !== '.' && f !== './VERSION')
     }
@@ -53,17 +53,20 @@ const deploy = async () => {
     const successful = []
     const status = await ssh.putDirectory('build/', credentials.remotePath, {
         recursive: true,
-        concurrency: 3,
+        concurrency: 1,
         tick: (localPath, remotePath, error) => {
             if (error) {
+                console.log(error);
                 failed.push(localPath)
             } else {
+                process.stdout.write(".");
                 successful.push(localPath)
             }
         }
     })
 
     if (status && !failed.length) {
+        console.log("");
         console.log('Upload complete')
 
         if (filesToDelete.length > 0) {
@@ -88,6 +91,7 @@ const deploy = async () => {
 
         console.log('Deployment complete')
     } else {
+        console.log("");
         console.err('Deployment failed!')
         if (failed.length) {
             console.err('failed transfers')
