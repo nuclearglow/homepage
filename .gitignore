@@ -4,6 +4,7 @@ node_modules
 # clutter
 /*.log
 /coverage
+size-plugin.json
 
 # error messages
 npm-debug.log*

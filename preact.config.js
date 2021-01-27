@@ -1,3 +1,4 @@
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import { resolve } from 'path'
 
 export default {
@@ -21,5 +22,31 @@ export default {
 
         // Use any `index` file, not just index.js
         config.resolve.alias['preact-cli-entrypoint'] = resolve(process.cwd(), 'src', 'index')
+
+        config.plugins.push(new FaviconsWebpackPlugin({
+            logo: './assets/rtype.png',
+            cache: true,
+            inject: true,
+            favicons: {
+                appName: 'svenvowe.de',
+                appDescription: 'Hello',
+                developerName: 'Sven Vowe',
+                background: '#1e1e1e',
+                theme_color: '#1e1e1e',
+                appleStatusBarStyle: 'black-translucent',
+                orientation: 'portrait',
+                pixel_art: true,
+                icons: {
+                    favicons: true,
+                    android: true,
+                    appleIcon: true,
+                    yandex: true,
+                    coast: true,
+                    firefox: false,
+                    appleStartup: false,
+                    windows: false
+                }
+            }
+        }))
     }
 }

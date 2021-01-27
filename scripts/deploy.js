@@ -8,7 +8,7 @@ const version = require('../package.json').version
 const credentials = require('../.credentials.json')
 
 /**
- * Deployment: connect to SSH, clean up files, copy dist folder to remote
+ * Deployment: connect to SSH, clean up files, copy build folder to remote
  */
 console.log(`Deploying ${name}@${version}`)
 
@@ -27,7 +27,7 @@ const deploy = async () => {
 
     // Get local list of files to deploy
     let localFiles = []
-    let result = await exec('find . -print', { cwd: './dist' })
+    let result = await exec('find . -print', { cwd: './build' })
     if (result.stdout) {
         localFiles = result.stdout.split('\n').filter((f) => f !== '.')
     }
@@ -48,10 +48,10 @@ const deploy = async () => {
 
     console.log(`Uploading ${localFiles.length} files (${deploymentSize} MB)`)
 
-    // upload dist/
+    // upload build/
     const failed = []
     const successful = []
-    const status = await ssh.putDirectory('dist/', credentials.remotePath, {
+    const status = await ssh.putDirectory('build/', credentials.remotePath, {
         recursive: true,
         concurrency: 3,
         tick: (localPath, remotePath, error) => {
