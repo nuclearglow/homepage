@@ -4,9 +4,9 @@
   "version": "2.2.0",
   "license": "MIT",
   "scripts": {
+    "start": "preact watch --host localhost --https --key .certs/localhost+3-key.pem --cert .certs/localhost+3.pem",
     "build": "preact build --prerender=false --no-inline-css",
     "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch --host localhost --https --key .certs/localhost+3-key.pem --cert .certs/localhost+3.pem",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests",
     "deploy:remote": "node ./scripts/deploy.js",

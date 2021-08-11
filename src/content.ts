@@ -11,8 +11,7 @@ export const banner = `
 > Nice to meet you!
 
 > I'm Sven Vowe
-\t* full stack web dev
-\t* IT freelancer
+    a full stack web dev
 
 > Reach me here:
 
@@ -38,17 +37,13 @@ export const contacts: Contacts[] = [
         link: 'https://www.linkedin.com/in/svenvowe/'
     },
     {
-        text: '\t-> gulp\n',
-        link: 'https://www.gulp.de/gulp2/home/profil/6hpm75x1o6?5'
-    },
-    {
         text: '\t-> xing\n',
         link: 'https://xing.to/svenvowe'
     }
 ]
 
 export const footer = `
-> Have a nice day !\n
+> Cheers and have a nice day !\n
 `
 
 export const prompt = `~ % `

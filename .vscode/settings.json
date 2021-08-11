@@ -26,7 +26,7 @@
     "editor.insertSpaces": true,
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "files.exclude": {
         ".eslintcache": true
     },
